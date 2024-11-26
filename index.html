@@ -1,19 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hockey </title>
+    <!-- Daisy and Tailwindcss css  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- Tailwindcss custome css      -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'b-p': '#FF4240',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- font css  -->
+    <style>
+        .all-font {
+            font-family: "Manrope", sans-serif;
+        }
+    </style>
 </head>
-<body>
+
+<body class="all-font container mx-auto p-4 lg:px-32">
     <header>
-        
+        <!-- Nav section  -->
+        <nav>
+            <div class="navbar bg-base-100 p-0">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost p-0 pr-2 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            <li><a>Item 1</a></li>
+                            <li>
+                                <a>Parent</a>
+                                <ul class="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </li>
+                            <li><a>Item 3</a></li>
+                        </ul>
+                    </div>
+                    <a class=" text-2xl lg:text-4xl font-bold lg:font-extrabold text-[#131318]">Hockey<span
+                            class="text-b-p">’</span>s</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li class="text-base font-semibold text-b-p"><a>Home</a></li>
+                        <li class="text-base font-normal text-[#424247]"><a>About</a></li>
+                        <li class="text-base font-normal text-[#424247]"><a>Pages</a></li>
+                        <li class="text-base font-normal text-[#424247]"><a>Blog</a></li>
+                        <li class="text-base font-normal text-[#424247]"><a>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end flex lg:gap-4">
+                    <button class="btn btn-ghost btn-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                    <a class="btn bg-b-p text-xl font-semibold text-white">Get Ticket</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Hero section  -->
+        <section>
+            <!-- Carousel section  -->
+            <div class="carousel w-full relative">
+                <!-- slide-1  -->
+                <div id="slide1" class="carousel-item lg:relative w-full">
+                    <div class="w-full">
+                        <div class="hero rounded-xl lg:rounded-2xl h-[200px] lg:h-[550px] "
+                            style="background-image: url(Images/1.png);">
+                            <!-- <div class="hero-overlay bg-opacity-60"></div> -->
+
+                        </div>
+                    </div>
+                    <div class=" absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide4" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <!-- slide-2  -->
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+                        class="w-full rounded-xl lg:rounded-2xl" />
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <!-- Slide-3  -->
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
+                        class="w-full rounded-xl lg:rounded-2xl" />
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide4" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <!-- slide-4  -->
+                <div id="slide4" class="carousel-item relative w-full">
+                    <img src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
+                        class="w-full rounded-xl lg:rounded-2xl" />
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide3" class="btn btn-circle">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Hero Card  -->
+            <div
+                class="p-4 lg:p-8 bg-[#131318] rounded-xl lg:rounded-2xl w-full lg:w-[502px] lg:absolute lg:top-[57%] lg:left-[57%]">
+                <h3 class="text-lg lg:text-2xl font-bold text-white">Meet all the heroes from the field</h3>
+                <p class="text-sm lg:text-base font-medium text-[#FFFFFF99]">Dit amet consectetur. Condimentum dignissim
+                    adipiscing
+                    aliquam turpis placerat
+                    dolor. Purus urna in sit nullam proin. </p>
+            </div>
+        </section>
     </header>
     <main>
-
+        <!-- Professional Hockeys Club -->
+        <section class="">
+            <div class="border-y-2 border-dashed py-6 lg:py-8">
+                <div class="mx-auto lg:w-[607px] text-center ">
+                    <h3 class="text-4xl font-extrabold text-[#131318]">Professional Hockeys Club</h3>
+                    <p class="text-base text-[#13131899] font-normal">Dit amet consectetur. Condimentum dignissim
+                        adipiscing
+                        aliquam turpis placerat dolor. Purus urna in
+                        sit nullam proin. </p>
+                </div>
+            </div>
+            <!-- card section  -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                <!-- card-1  -->
+                <div class="card items-center p-4">
+                    <div class="radial-progress text-xl font-bold text-[#FF4240] " style="--value:87;"
+                        role="progressbar">87%</div>
+                    <div class=" text-center mt-4 lg:mt-6">
+                        <h2 class="text-xl text-[#131318] font-semibold mb-2 lg:mb-4">Prayer Facility</h2>
+                        <p class="text-base font-normal text-[#13131899] lg:w-[250px] mx-auto">If a dog chews shoes
+                            whose shoes does he choose?</p>
+                    </div>
+                </div>
+                <!-- card-2  -->
+                <div class="card items-center p-4">
+                    <div class="radial-progress text-xl font-bold text-[#49D293] " style="--value:95;"
+                        role="progressbar">95%</div>
+                    <div class=" text-center mt-4 lg:mt-6">
+                        <h2 class="text-xl text-[#131318] font-semibold mb-2 lg:mb-4">Prayer Facility</h2>
+                        <p class="text-base font-normal text-[#13131899] lg:w-[250px] mx-auto">If a dog chews shoes
+                            whose shoes does he choose?</p>
+                    </div>
+                </div>
+                <!-- card-3  -->
+                <div class="card items-center p-4">
+                    <div class="radial-progress text-xl font-bold text-[#FFB546] " style="--value:90;"
+                        role="progressbar">90%</div>
+                    <div class=" text-center mt-4 lg:mt-6">
+                        <h2 class="text-xl text-[#131318] font-semibold mb-2 lg:mb-4">Prayer Facility</h2>
+                        <p class="text-base font-normal text-[#13131899] lg:w-[250px] mx-auto">If a dog chews shoes
+                            whose shoes does he choose?</p>
+                    </div>
+                </div>
+                <!-- card-4  -->
+                <div class="card items-center p-4">
+                    <div class="radial-progress text-xl font-bold text-[#4C8DF1] " style="--value:80;"
+                        role="progressbar">80%</div>
+                    <div class=" text-center mt-4 lg:mt-6">
+                        <h2 class="text-xl text-[#131318] font-semibold mb-2 lg:mb-4">Prayer Facility</h2>
+                        <p class="text-base font-normal text-[#13131899] lg:w-[250px] mx-auto">If a dog chews shoes
+                            whose shoes does he choose?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Program Sections -->
+        <section>
+            <div class="border-y-2 border-dashed py-6 lg:py-8">
+                <div class="mx-auto lg:w-[607px] text-center ">
+                    <h3 class="text-4xl font-extrabold text-[#131318]">Program Sections</h3>
+                    <p class="text-base text-[#13131899] font-normal">Dit amet consectetur. Condimentum dignissim
+                        adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin.</p>
+                </div>
+            </div>
+            <!-- card container  -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- card -1  -->
+                <div class="relative h-[244px] lg:h-[338px]">
+                    <div>
+                        <img class="w-full h-[244px] lg:h-[338px] rounded-xl lg:rounded-2xl " src="Images/2.png" alt="" srcset="">
+                    </div>
+                    <div class="absolute bg-[#131318] top-0 left-0 h-full w-full opacity-50 rounded-xl lg:rounded-2xl"></div>
+                    <div class="absolute inset-x-0 bottom-0 w-[277px] lg:w-[490px] p-4 lg:p-8">
+                        <h1 class="mb-2 lg:mb-4 text-xl lg:text-2xl text-white  font-bold">Junior Program</h1>
+                        <p class="mb-4 lg:mb-6  text-white text-sm lg:text-base">
+                            Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. 
+                        </p>
+                        <button class="bg-b-p text-white text-lg font-medium px-4 lg:px-5 py-2 lg:py-3  rounded-lg lg:rounded-xl">Register
+                            Now</button>
+                    </div>
+                </div>
+                <!-- card -2  -->
+                <div class="relative h-[244px] lg:h-[338px]">
+                    <div>
+                        <img class="w-full h-[244px] lg:h-[338px] rounded-xl lg:rounded-2xl " src="Images/3.png" alt="" srcset="">
+                    </div>
+                    <div class="absolute bg-[#131318] top-0 left-0 h-full w-full opacity-50 rounded-xl lg:rounded-2xl"></div>
+                    <div class="absolute inset-x-0 bottom-0 w-[277px] lg:w-[490px] p-4 lg:p-8">
+                        <h1 class="mb-2 lg:mb-4 text-xl lg:text-2xl text-white  font-bold">Teenager Program</h1>
+                        <p class="mb-4 lg:mb-6  text-white text-sm lg:text-base">
+                            Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla.  
+                        </p>
+                        <button class="bg-b-p text-white text-lg font-medium px-4 lg:px-5 py-2 lg:py-3  rounded-lg lg:rounded-xl">Register
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- card -3  -->
+            <div class="relative h-[244px] lg:h-[338px]  mt-6">
+                <div>
+                    <img class="w-full h-[244px] lg:h-[338px] rounded-xl lg:rounded-2xl " src="Images/4.png" alt="" srcset="">
+                </div>
+                <div class="absolute bg-[#131318] top-0 left-0 h-full w-full opacity-50 rounded-xl lg:rounded-2xl"></div>
+                <div class="absolute inset-x-0 bottom-0 w-[277px] lg:w-[490px] p-4 lg:p-8">
+                    <h1 class="mb-2 lg:mb-4 text-xl lg:text-2xl text-white  font-bold">Professional Program</h1>
+                    <p class="mb-4 lg:mb-6  text-white text-sm lg:text-base">
+                        Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. 
+                    </p>
+                    <button class="bg-b-p text-white text-lg font-medium px-4 lg:px-5 py-2 lg:py-3  rounded-lg lg:rounded-xl">Register
+                        Now</button>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
 
     </footer>
 </body>
+
 </html>
